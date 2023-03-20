@@ -14,12 +14,12 @@ float LuasSegitiga(float a, float t) {
 
 int main() {
 
-    float panjang, lebar, jejari, tinggi;
+    float panjang, lebar, jejari, alas, tinggi;
     int pilihan;
     do {
-        cout << "\n\n==========================" endl;
-        cout << "========== MENU ==============" endl;
-        cout << "==============================" endl;
+        cout << "\n\n==========================" << endl;
+        cout << "========== MENU ==============" << endl;
+        cout << "==============================" << endl;
         cout << "1. Luas Persegi" << endl;
         cout << "2. Luas Lingkaran" << endl;
         cout << "3. Luas Segitiga" << endl;
@@ -43,13 +43,21 @@ int main() {
             break;
 
         case 3:
-            cout << "Masukan Alas = ";
-            
-            
+            cout << "Masukan Alas =";
+            cin >> alas;
+            cout << "Masukan Tinggi =";
+            cin >> tinggi;
+            cout << "Luas Segitiga = " << LuasSegitiga(alas, tinggi);
+            break;
 
+        case 4:
+            break;
 
+        default :
+            cout << "PILIHAN TIDAK TERSEDIA" << endl;
+            break;
         }
-    }
+    } while (pilihan != 4);
 }
 int main()
 {
